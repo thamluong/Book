@@ -1,6 +1,7 @@
 package com.rm.model;
 
 public class Book {
+	
 	private int id;
 	private String name;
 	private String author;
@@ -9,10 +10,12 @@ public class Book {
 	private Category category;
 
 	public Book() {}
+	
 	public Book(String name, String author) {
 		this.name = name;
 		this.author = author;
 	}
+	
 	public int getId() {
 		return id;
 	}

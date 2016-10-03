@@ -10,6 +10,7 @@ import com.rm.model.Book;
 
 @Service
 public class BookServiceImpl implements BookService {
+	
 	@Autowired
 	private BookDAO bookDAO;
 

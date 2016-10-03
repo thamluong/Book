@@ -4,17 +4,19 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
+
 	<class name="com.rm.model.Book" table="book">
+	
 		<id name="id">
 			<generator class="increment"></generator>
 		</id>
 		<property name="name"></property>
 		<property name="author"></property>
-
 		<!-- <many-to-one name="information" class="com.rm.model.Information" column="id" 
 			unique="true" not-null="true" cascade="all" insert="false" update="false"/> -->
 			<one-to-one name="information" cascade="all" class="com.rm.model.Information" />
 			<one-to-one name="borrowBook" cascade="all" class="com.rm.model.BorrowBook" />
 			<one-to-one name="category" cascade="all" class="com.rm.model.Category" />
+			
 	</class>
 </hibernate-mapping>  
